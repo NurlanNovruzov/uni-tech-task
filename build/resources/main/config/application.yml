@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: ms-account
+  messages:
+    basename: i18n/messages
+    encoding: UTF-8
+  datasource:
+    url: jdbc:postgresql://localhost:5433/unitech
+    username: postgres
+    password: N005451
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.yml
+    enabled: true
